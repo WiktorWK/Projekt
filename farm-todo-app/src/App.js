@@ -4,6 +4,7 @@ import "./App.css";
 import Fields from "./components/Fields";
 import ToDoList from "./components/ToDoList";
 import AddFieldForm from './components/AddFieldForm';
+import AddToDoTask from './components/AddToDoTask';
 
 function App() {
   const [display, setDisplay] = useState("fields");
@@ -30,6 +31,9 @@ function App() {
   }
   if (display === 'addfield') {
     return <AddFieldForm props={{showFields}} />;
+  }
+  if (display === 'addtodotask') {
+    return <AddToDoTask />;
   }
 }
 

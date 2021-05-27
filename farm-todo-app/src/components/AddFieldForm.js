@@ -116,7 +116,8 @@ const AddFieldForm = ({ props }) => {
           <input
             value={fieldName}
             onChange={(ev) => handleChange(ev, setFieldName)}
-          />
+            placeholder={'name'}
+            />
         </label>
         <br />
         <label>
@@ -124,6 +125,7 @@ const AddFieldForm = ({ props }) => {
           <input
             value={fieldAdres}
             onChange={(ev) => handleChange(ev, setFieldAdres)}
+            placeholder={'000000_00.0000.00/00'}
           />
         </label>
       </form>
