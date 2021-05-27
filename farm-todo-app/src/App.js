@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+import Fields from "./components/Fields";
+import ToDoList from "./components/ToDoList";
+import AddFieldForm from './components/AddFieldForm';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [display, setDisplay] = useState("fields");
+
+  const [fieldAdres, setFieldAdres] = useState("");
+
+  const showToDoList = (adres) => {
+    setDisplay("todolist");
+    setFieldAdres(adres);
+  };
+
+  const showFields = () => {
+    setDisplay("fields");
+    setFieldAdres("");
+  };
+
+  const showAddFieldForm = () => {setDisplay('addfield')};
+
+  if (display === "fields") {
+    return <Fields props={{ showToDoList, showAddFieldForm }} />;
+  }
+  if (display === "todolist") {
+    return <ToDoList props={{ fieldAdres, showFields }} />;
+  }
+  if (display === 'addfield') {
+    return <AddFieldForm props={{showFields}} />;
+  }
 }
 
 export default App;
