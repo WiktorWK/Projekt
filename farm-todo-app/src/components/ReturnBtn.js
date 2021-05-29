@@ -1,12 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const ReturnBtn = ({ onClickHandler }) => {
-
-    return (
-        <button onClick={onClickHandler} >
-            BACK
-        </button>
-    );
-}
+  return <button onClick={onClickHandler}>BACK</button>;
+};
 
 export default ReturnBtn;

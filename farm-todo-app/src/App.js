@@ -16,6 +16,8 @@ function App() {
     setFieldAdres(adres);
   };
 
+  const returnToDoList = () => {setDisplay('todolist')};
+
   const showFields = () => {
     setDisplay("fields");
     setFieldAdres("");
@@ -23,17 +25,19 @@ function App() {
 
   const showAddFieldForm = () => {setDisplay('addfield')};
 
+  const showAddToDoTask = () => {setDisplay('addtodotask')};
+
   if (display === "fields") {
     return <Fields props={{ showToDoList, showAddFieldForm }} />;
   }
   if (display === "todolist") {
-    return <ToDoList props={{ fieldAdres, showFields }} />;
+    return <ToDoList props={{ fieldAdres, showFields, showAddToDoTask }} />;
   }
   if (display === 'addfield') {
     return <AddFieldForm props={{showFields}} />;
   }
   if (display === 'addtodotask') {
-    return <AddToDoTask />;
+    return <AddToDoTask props={{fieldAdres, returnToDoList}} />;
   }
 }
 

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FILEDS_URL } from "./constants";
 
 import ReturnBtn from "./ReturnBtn";
-import SaveFieldBtn from "./SaveFieldBtn";
+import SaveBtn from "./SaveBtn";
 
 const AddFieldForm = ({ props }) => {
   const { showFields } = props;
@@ -129,8 +129,8 @@ const AddFieldForm = ({ props }) => {
           />
         </label>
       </form>
-      <SaveFieldBtn onClickHandler={addField} />
       <ReturnBtn onClickHandler={showFields} />
+      <SaveBtn onClickHandler={addField} />
     </>
   );
 };

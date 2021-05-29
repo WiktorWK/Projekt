@@ -1,7 +1,7 @@
 import React from "react";
 
-const AddFieldBtn = ({ onClickHandler }) => {
+const AddBtn = ({ onClickHandler }) => {
   return <button onClick={onClickHandler}>+</button>;
 };
 
-export default AddFieldBtn;
+export default AddBtn;

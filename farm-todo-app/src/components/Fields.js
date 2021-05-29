@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FILEDS_URL } from "./constants";
 
 import Field from './Field';
-import AddFieldBtn from './AddFieldBtn';
+import AddBtn from './AddBtn';
 
 const Fields = ({props}) => {
   const [fields, setFields] = useState([]);
@@ -23,7 +23,7 @@ const Fields = ({props}) => {
         <Field key={i} props={{el, showToDoList}} />
       ))}
     </ul>
-    <AddFieldBtn onClickHandler={showAddFieldForm} />
+    <AddBtn onClickHandler={showAddFieldForm} />
     </>
   );
 };
