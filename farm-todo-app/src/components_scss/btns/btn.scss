@@ -1,0 +1,63 @@
+@import './../constants/colors.scss', './../constants/fonts.scss';
+
+.btn {
+  &_add {
+    width: 15vw;
+    height: 15vw;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: $color-primary;
+
+    color: $color-text-btn;
+
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    text-justify: auto;
+
+    position:fixed;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+  &_return {
+    width: 20vw;
+    height: 15vw;
+
+    border-radius: 7.5vw;
+    border: none;
+
+    background-color: $color-primary;
+
+    color: $color-text-btn;
+
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    position: fixed;
+    bottom: 0.8rem;
+    left: 0.8rem;
+  }
+  &_save {
+    width: 20vw;
+    height: 15vw;
+
+    border-radius: 7.5vw;
+    border: none;
+
+    background-color: $color-primary;
+
+    color: $color-text-btn;
+
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    position: fixed;
+    bottom: 0.8rem;
+    left: 6rem;
+  }
+}

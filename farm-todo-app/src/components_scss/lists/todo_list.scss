@@ -1,0 +1,28 @@
+@import './../constants/colors.scss', './../constants/fonts.scss';
+
+.todo{
+    &_list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+
+        > li{
+            background-color: $color-secondaary;
+
+            margin: 0.4rem 0 0.4rem 0;
+            padding: 0.2rem;
+
+            border: 0.1rem solid $color-primary;
+            border-radius: 0.6rem;
+
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: $color-text;
+
+            text-transform: uppercase;
+    
+        }
+    }
+}

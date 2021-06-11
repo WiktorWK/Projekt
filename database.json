@@ -47,179 +47,18 @@
         }
       ],
       "curent": {
-        "plant": null,
+        "plant": "sugar beat",
         "year": null,
         "todo_list": [
           {
-            "id": 1,
-            "agrotechnical_treatment": null,
+            "id": 0,
+            "agrotechnical_treatment": "subsoiling",
             "date": null,
             "details": {
               "type": null,
-              "name": null,
-              "quantity": null
-            }
-          }
-        ]
-      },
-      "future": [
-        {
-          "plant": null,
-          "year": null,
-          "todo_list": [
-            {
-              "id": 1,
-              "agrotechnical_treatment": null,
-              "date": null,
-              "details": {
-                "type": null,
-                "name": null,
-                "quantity": null
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "field 2",
-      "adres": "0000.16",
-      "area": null,
-      "update_date": null,
-      "soil_class": {
-        "1": null,
-        "2": null,
-        "4": null,
-        "5": null,
-        "6": null,
-        "31": null,
-        "32": null
-      },
-      "soil_check": [
-        {
-          "date": null,
-          "composition": {
-            "ph": null,
-            "nitrogen": null,
-            "phosphorus": null,
-            "potassium": null,
-            "magnesium": null,
-            "sulfur": null
-          }
-        }
-      ],
-      "history": [
-        {
-          "plant": null,
-          "year": null,
-          "todo_list": [
-            {
-              "id": 1,
-              "agrotechnical_treatment": null,
-              "date": null,
-              "details": {
-                "type": null,
-                "name": null,
-                "quantity": null
-              }
-            }
-          ]
-        }
-      ],
-      "curent": {
-        "plant": null,
-        "year": null,
-        "todo_list": [
-          {
-            "id": 1,
-            "agrotechnical_treatment": null,
-            "date": null,
-            "details": {
-              "type": null,
-              "name": null,
-              "quantity": null
-            }
-          }
-        ]
-      },
-      "future": [
-        {
-          "plant": null,
-          "year": null,
-          "todo_list": [
-            {
-              "id": 1,
-              "agrotechnical_treatment": null,
-              "date": null,
-              "details": {
-                "type": null,
-                "name": null,
-                "quantity": null
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "field 3",
-      "adres": "0000.17",
-      "area": null,
-      "update_date": null,
-      "soil_class": {
-        "1": null,
-        "2": null,
-        "4": null,
-        "5": null,
-        "6": null,
-        "31": null,
-        "32": null
-      },
-      "soil_check": [
-        {
-          "date": null,
-          "composition": {
-            "ph": null,
-            "nitrogen": null,
-            "phosphorus": null,
-            "potassium": null,
-            "magnesium": null,
-            "sulfur": null
-          }
-        }
-      ],
-      "history": [
-        {
-          "plant": null,
-          "year": null,
-          "todo_list": [
-            {
-              "id": 1,
-              "agrotechnical_treatment": null,
-              "date": null,
-              "details": {
-                "type": null,
-                "name": null,
-                "quantity": null
-              }
-            }
-          ]
-        }
-      ],
-      "curent": {
-        "plant": "rape",
-        "year": null,
-        "todo_list": [
-          {
-            "id": 1,
-            "agrotechnical_treatment": null,
-            "date": null,
-            "details": {
-              "type": null,
-              "name": null,
-              "quantity": null
+              "name": "",
+              "quantity": " kg/ha",
+              "depth": ""
             }
           }
         ]
@@ -244,5 +83,58 @@
       ]
     }
   ],
-  "machines": []
+  "machines": [
+    {
+      "id": 0,
+      "producer": "New Holand",
+      "model": "T7 165.S"
+    },
+    {
+      "id": 1,
+      "producer": "Ursus",
+      "model": "C 180"
+    },
+    {
+      "id": 2,
+      "producer": "Amazone",
+      "model": "CA 3000"
+    }
+  ],
+  "data": [
+    {
+      "id": 0,
+      "curent_date": {
+        "iso_date": null,
+        "year": 2021,
+        "month": 6,
+        "day": 9
+      }
+    },
+    {
+      "id": 1,
+      "plants": {
+        "winter_wheat": {
+          "seeding": ""
+        },
+        "sugar_beat": "",
+        "rape": "",
+        "bean": ""
+      }
+    },
+    {
+      "id": 2,
+      "machines_data": {
+        "producers": [
+          {
+            "producer": "New Holand",
+            "models": ["T7 165S", "T6 140"]
+          },
+          {
+            "producer": "Amazone",
+            "models": ["AC 3000", "DC 4000"]
+          }
+        ]
+      }
+    }
+  ]
 }

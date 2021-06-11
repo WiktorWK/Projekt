@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { FILEDS_URL } from "./constants";
+import { FILEDS_URL } from "./../../constants";
 
-import ReturnBtn from "./ReturnBtn";
-import SaveBtn from "./SaveBtn";
+import ReturnBtn from "./../../buttons/ReturnBtn";
+import SaveBtn from "./../../buttons/SaveBtn";
 
 const AddFieldForm = ({ props }) => {
   const { showFields } = props;
@@ -12,7 +12,23 @@ const AddFieldForm = ({ props }) => {
 
   const [fieldAdres, setFieldAdres] = useState("");
 
-  const handleChange = (ev, fun) => fun(ev.target.value);
+  const labelClasses = "label";
+  const inputClasses = "input";
+  const formClasses = "form";
+
+  const handleChange = (ev, fun) => {
+    if (fun === setFieldAdres) {
+      console.log(ev.target.value.length);
+
+      if (ev.target.value.length < 16) {
+        ev.target.className = "input_red_border";
+        console.log("shit");
+      } else {
+        ev.target.className = "input";
+      }
+    }
+    fun(ev.target.value);
+  };
 
   const addField = () => {
     const data = {
@@ -64,18 +80,7 @@ const AddFieldForm = ({ props }) => {
       curent: {
         plant: null,
         year: null,
-        todo_list: [
-          {
-            id: 1,
-            agrotechnical_treatment: null,
-            date: null,
-            details: {
-              type: null,
-              name: null,
-              quantity: null,
-            },
-          },
-        ],
+        todo_list: [],
       },
       future: [
         {
@@ -104,30 +109,32 @@ const AddFieldForm = ({ props }) => {
       },
       body: JSON.stringify(data),
     });
-    setFieldAdres('');
-    setFieldName('');
+    setFieldAdres("");
+    setFieldName("");
   };
 
   return (
     <>
-      <form>
-        <label>
-          Field name:
-          <input
-            value={fieldName}
-            onChange={(ev) => handleChange(ev, setFieldName)}
-            placeholder={'name'}
-            />
+      <form className={`${formClasses}`}>
+        <label className={`${labelClasses}`}>
+          Field name: <span>(yours name)</span>
         </label>
+        <input
+          className={`${inputClasses}`}
+          value={fieldName}
+          onChange={(ev) => handleChange(ev, setFieldName)}
+          placeholder={"name"}
+        />
         <br />
-        <label>
-          Field adres:
-          <input
-            value={fieldAdres}
-            onChange={(ev) => handleChange(ev, setFieldAdres)}
-            placeholder={'000000_00.0000.00/00'}
-          />
+        <label className={`${labelClasses}`}>
+          Field adress: <span>(000000_00.0000.00/00)</span>
         </label>
+        <input
+          className={`${inputClasses}`}
+          value={fieldAdres}
+          onChange={(ev) => handleChange(ev, setFieldAdres)}
+          placeholder={"000000_00.0000.00/00"}
+        />
       </form>
       <ReturnBtn onClickHandler={showFields} />
       <SaveBtn onClickHandler={addField} />

@@ -1,0 +1,9 @@
+@import './../constants/colors.scss', './../constants/fonts.scss';
+
+.title{
+    &_todo_list{
+        font-family: $font-main;
+        margin: 0.3rem;
+        color: $color-titles;
+    }
+}

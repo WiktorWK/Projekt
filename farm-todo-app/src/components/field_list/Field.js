@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./../components_scss/field.scss";
-
 const Field = ({ props }) => {
   const classes = "list_el";
 

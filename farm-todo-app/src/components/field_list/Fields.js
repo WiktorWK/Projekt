@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-import { FILEDS_URL } from "./constants";
+import { FILEDS_URL } from "../constants";
 
-import Field from './Field';
-import AddBtn from './AddBtn';
+import Field from '../field_list/Field';
+import AddBtn from '../buttons/AddBtn';
+import ReturnBtn from './../buttons/ReturnBtn';
 
 const Fields = ({props}) => {
   const [fields, setFields] = useState([]);
 
-  const {showToDoList, showAddFieldForm} = props;
+  const {showToDoList, showAddFieldForm, showMainMenu} = props;
+
+  const classes = "list";
 
   useEffect(() => {
     fetch(`${FILEDS_URL}`)
@@ -18,12 +21,13 @@ const Fields = ({props}) => {
 
   return (
     <>
-    <ul>
+    <ul className={`${classes}`} >
       {fields.map((el, i) => (
         <Field key={i} props={{el, showToDoList}} />
       ))}
     </ul>
     <AddBtn onClickHandler={showAddFieldForm} />
+    <ReturnBtn onClickHandler={showMainMenu} />
     </>
   );
 };

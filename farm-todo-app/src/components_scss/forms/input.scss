@@ -1,0 +1,20 @@
+.input {
+  box-sizing: border-box;
+
+  padding: 0.5rem;
+  width: 100%;
+  border: unset;
+  border-radius: 0.8rem;
+  outline-color: $color-outline;
+  &_red {
+    &_border {
+      box-sizing: border-box;
+
+      padding: 0.5rem;
+      width: 100%;
+      border: unset;
+      border-radius: 0.8rem;
+      outline-color: $color-bad;
+    }
+  }
+}

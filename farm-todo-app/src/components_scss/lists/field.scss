@@ -1,0 +1,27 @@
+@import './../constants/colors.scss', './../constants/fonts.scss';
+
+.list {
+    margin: 0;
+    padding: 0;
+  
+    &_el {
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+
+    background-color: $color-secondaary;
+    border: 0.3rem solid rgba($color-background, $alpha: 1);
+    border-radius: 0.9rem;
+
+    font-family: 'Nunito', sans-serif;
+    color: $color-text;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
