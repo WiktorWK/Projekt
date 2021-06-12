@@ -98,6 +98,21 @@
       "id": 2,
       "producer": "Amazone",
       "model": "CA 3000"
+    },
+    {
+      "id": 3,
+      "producer": "New Holand",
+      "model": "T7 165S"
+    },
+    {
+      "id": 4,
+      "producer": "Amazone",
+      "model": "DC 4000"
+    },
+    {
+      "id": 5,
+      "producer": "Amazone",
+      "model": "AC 3000"
     }
   ],
   "data": [
@@ -112,14 +127,17 @@
     },
     {
       "id": 1,
-      "plants": {
-        "winter_wheat": {
-          "seeding": ""
+      "plants": [
+        {
+          "plant": "wheat"
         },
-        "sugar_beat": "",
-        "rape": "",
-        "bean": ""
-      }
+        {
+          "plant": "sugar beat"
+        },
+        {
+          "plant": "rape"
+        }
+      ]
     },
     {
       "id": 2,
@@ -127,11 +145,17 @@
         "producers": [
           {
             "producer": "New Holand",
-            "models": ["T7 165S", "T6 140"]
+            "models": [
+              "T7 165S",
+              "T6 140"
+            ]
           },
           {
             "producer": "Amazone",
-            "models": ["AC 3000", "DC 4000"]
+            "models": [
+              "AC 3000",
+              "DC 4000"
+            ]
           }
         ]
       }

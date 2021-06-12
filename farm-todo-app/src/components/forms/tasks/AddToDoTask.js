@@ -18,7 +18,7 @@ const AddToDoTask = ({ props }) => {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [quantityUnit, setQuantityUnit] = useState("kg/ha");
-  const [depth, setDepth] = useState('');
+  const [depth, setDepth] = useState("");
 
   const agrotechnicalTreatmentOptions = [
     "subsoiling",

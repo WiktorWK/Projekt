@@ -19,16 +19,16 @@ function App() {
 
   const [date, setDate] = useState(new Date().toISOString());
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      dateActualization(date, setDate);
-      console.log(date);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     dateActualization(date, setDate);
+  //     console.log(date);
+  //   }, 5000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [date]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [date]);
 
   const showToDoList = (adres) => {
     setDisplay("todolist");
